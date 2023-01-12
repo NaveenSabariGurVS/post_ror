@@ -1,0 +1,9 @@
+[
+<%if !@posts.nil? && @posts.present?%>
+    <%@posts.each{|each_row|%>
+        [
+        "<%= each_row.title%>,<%=each_row.description%>"
+        <% if each_row==@posts.last then %>]<% else %>],<% end %>
+    <% }%>
+<% end%>
+]
